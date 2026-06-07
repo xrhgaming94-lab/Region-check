@@ -1,10 +1,10 @@
 {
   "functions": {
-    "api/region.py": {
+    "api/app.py": {
       "runtime": "python3.9"
     }
   },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/region.py" }
+    { "source": "/(.*)", "destination": "/app.py" }
   ]
 }
