@@ -7,7 +7,7 @@ _ = Flask(__name__)
 # Updated Hidden Links (Base64)
 __ = "dC5tZS9TVEFSX01FVEhPREU="             
 ___ = "dC5tZS9TVEFSX01FVEhPREU="        
-____ = "dC5tZS9TVEFSX0dNUg=="            
+____ = "dC5tZS9TVEFSX0dNUg=="       
 
 @_.route('/region', methods=['GET'])
 def _____():
@@ -30,7 +30,7 @@ def _____():
         "Sec-Fetch-Site": "same-origin",
         "User-Agent": "Mozilla/5.0 (Linux; Android 15; RMX5070 Build/UKQ1.231108.001) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.7204.157 Mobile Safari/537.36",
         "X-Requested-With": "mark.via.gp",
-        "Cookie": "source=mb; region=PK; mspid2=13c49fb51ece78886ebf7108a4907756; _fbp=fb.1.1753985808817.794945392376454660; language=en; datadome=WQaG3HalUB3PsGoSXY3TdcrSQextsSFwkOp1cqZtJ7Ax4YkiERHUgkgHlEAIccQO~w8dzTGM70D9SzaH7vymmEqOrVeX5pIsPVE22Uf3TDu6W3WG7j36ulnTg2DltRO7; session_key=hq02g63z3zjcumm76mafcooitj7nc79y",
+        "Cookie": "session_key=nc0gnuzm5msiyuxnn5mlwkrxpnizen3p;region=PK;source=mb;_fbp=fb.1.1772607670314.265654977791660607;_ga=GA1.1.1968215565.1772607669;_ga_C956TFJLD0=GS2.1.s1772607668$o1$g1$t1772607698$j30$l0$h0;datadome=pZPKg0pAoNyJc3k5Z4tuDnQtvcuZ~x86gN9Pm_73GNQQx9nIZC0QZUR3YpRpi31p6mi9nQ~NQiuUPrXJ0d1eAzPVRu8QJcF9LcjqTUYBVaHprHeFP2KOg9lnmvd0Q3LZ;language=en;mspid2=500b9a3b5640bb6a3b753b5f32a65f87",
     }
 
     ________ = {
@@ -41,7 +41,7 @@ def _____():
     try:
         _________ = requests.post("https://topup.pk/api/auth/player_id_login", headers=_______, json=________, timeout=15)
         __________ = _________.json() if _________.text else {}
-    except:
+    except Exception:
         __________ = {}
 
     return jsonify({
@@ -55,15 +55,9 @@ def _____():
         }
     })
 
+# Local development
 if __name__ == '__main__':
     _.run(host='0.0.0.0', port=5000)
 
-def handler(___________, ____________):
-    with _.test_client() as _____________:
-        return _____________.open(
-            path=___________.path,
-            method=___________.method,
-            headers=___________.headers,
-            data=___________.get_data(),
-            query_string=___________.query_string
-        )
+# Vercel entry point – keep the original '_' and also expose it as 'app'
+app = _
